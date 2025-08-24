@@ -1,0 +1,29 @@
+#> zz.ph_motion:load
+# 定義/初期設定
+# @within
+#   tag/function minecraft:load
+
+## 各種定義
+    function zz.ph_motion:define
+
+## 入力の初期設定
+    execute unless data storage ph_motion: in run data modify storage ph_motion: in set value {}
+    execute unless data storage ph_motion: in_default run data modify storage ph_motion: in_default set value {\
+        gravity:9.8f,  velocity:3f,\
+        c_drag:0.8f,    c_ldrag:1.6f,       c_reflect:0.8f, c_friction:0.7f,\
+        max_time:200,   max_distance:150,   max_reflect:5,  min_velocity:0.001f,\
+        kill:false,     trail:"minecraft:white_smoke",\
+        additional:[],\
+        events:{tick:"",every_hit:"",hit_entity:"",hit_block:"",last_hit:""},\
+    }
+    
+## スコアのリセット
+
+## ストレージ初期化
+
+## (0,0)チャンクの常時読み込み
+    forceload add 0 0
+
+## 計算用エンティティの召喚
+    execute unless score 4fe002bb-0000-0000-0000-000000000001 _ matches 1 store success score 4fe002bb-0000-0000-0000-000000000001 _ run summon marker 0 0 0 {UUID:[I;1340080827,0,0,1]}
+    execute unless score 4fe002bb-0000-0000-0000-000000000002 _ matches 1 store success score 4fe002bb-0000-0000-0000-000000000002 _ run summon marker 0 0 0 {UUID:[I;1340080827,0,0,2]}
