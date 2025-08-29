@@ -24,23 +24,24 @@
     # 計算
     function zz.ph_motion:core/acc/main
     # イテレーション回数を計算
-    scoreboard players operation #entity phmS.time = #entity phmS.x.2
-    scoreboard players operation #phmH.2 phmS.y.1 = #entity phmS.y.2
-    scoreboard players operation #phmH.2 phmS.z.1 = #entity phmS.z.2
-    scoreboard players operation #entity phmS.time *= #entity phmS.x.2
-    scoreboard players operation #phmH.2 phmS.y.1 *= #entity phmS.y.2
-    scoreboard players operation #phmH.2 phmS.z.1 *= #entity phmS.z.2
-    scoreboard players operation #entity phmS.time += #phmH.2 phmS.y.1
-    scoreboard players operation #entity phmS.time += #phmH.2 phmS.z.1
-    scoreboard players operation #entity phmS.time /= #c1000000 _
-    execute if score #entity phmS.time matches ..0 run scoreboard players set #entity phmS.time 1
+    # scoreboard players operation #entity phmS.time = #entity phmS.x.2
+    # scoreboard players operation #phmH.2 phmS.y.1 = #entity phmS.y.2
+    # scoreboard players operation #phmH.2 phmS.z.1 = #entity phmS.z.2
+    # scoreboard players operation #entity phmS.time *= #entity phmS.x.2
+    # scoreboard players operation #phmH.2 phmS.y.1 *= #entity phmS.y.2
+    # scoreboard players operation #phmH.2 phmS.z.1 *= #entity phmS.z.2
+    # scoreboard players operation #entity phmS.time += #phmH.2 phmS.y.1
+    # scoreboard players operation #entity phmS.time += #phmH.2 phmS.z.1
+    # scoreboard players operation #entity phmS.time /= #c1000000 _
+    # execute if score #entity phmS.time matches ..0 run scoreboard players set #entity phmS.time 1
     # 積分時間の逆数
-    scoreboard players set #phmH.1 phmS.time 20
-    scoreboard players operation #phmH.1 phmS.time *= #entity phmS.time
+    # scoreboard players operation #phmH.1 phmS.time /= #entity phmS.time
     
 ## 移動を実行
     scoreboard players set #entity phmS. 0
-    function zz.ph_motion:core/ray/main
+    scoreboard players set #entity phmS.time 1
+    scoreboard players set #phmH.1 phmS.time 50
+    execute at @s run function zz.ph_motion:core/move/main
 
 ## 終了
     # 時間

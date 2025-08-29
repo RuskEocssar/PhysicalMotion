@@ -12,9 +12,9 @@
         gravity:9.8f,  velocity:3f,\
         c_drag:0.8f,    c_ldrag:1.6f,       c_reflect:0.8f, c_friction:0.7f,\
         max_time:200,   max_distance:150,   max_reflect:5,  min_velocity:0.001f,\
-        kill:false,     trail:"minecraft:white_smoke",\
+        kill:false,     rotate:true,        trail:"minecraft:dust{color:[1f,1f,1f],scale:0.2}",\
         additional:[],\
-        events:{tick:"",every_hit:"",hit_entity:"",hit_block:"",last_hit:""},\
+        events:{tick:"",hit_every:"",hit_entity:"",hit_block:"",hit_last:""},\
     }
     
 ## スコアのリセット
