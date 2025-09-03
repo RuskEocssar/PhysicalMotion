@@ -10,6 +10,7 @@
     # @within pm_motion:**
         scoreboard objectives add _ dummy
         scoreboard objectives add pmmS. dummy "汎用"
+        scoreboard objectives add pmmS.id dummy "id"
         scoreboard objectives add pmmS.time dummy "時間"
         scoreboard objectives add pmmS.distance dummy "距離"
         scoreboard objectives add pmmS.count dummy "カウント"
@@ -44,7 +45,6 @@
     scoreboard players set #c-2 _ -2
     scoreboard players set #c-1 _ -1
     scoreboard players set #c2 _ 2
-    scoreboard players set #c20 _ 20
     scoreboard players set #c100 _ 100
     scoreboard players set #c1000 _ 1000
     scoreboard players set #c1000000 _ 1000000

@@ -15,4 +15,4 @@
     scoreboard players reset @s pmmS.count
     # その他
     tag @s remove pmmT.motion
-    execute if data storage pm_motion:zz/core data{kill:true} run kill @s
+    execute if data storage pm_motion:zz data{kill:true} run kill @s

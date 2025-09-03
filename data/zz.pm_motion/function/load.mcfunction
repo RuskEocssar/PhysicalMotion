@@ -9,13 +9,14 @@
 ## 入力の初期設定
     execute unless data storage pm_motion: in run data modify storage pm_motion: in set value {}
     execute unless data storage pm_motion: in_default run data modify storage pm_motion: in_default set value {\
-        gravity:9.8f,  velocity:3f,\
-        c_drag:0.8f,    c_ldrag:1.6f,       c_reflect:0.8f, c_friction:0.7f,\
+        gravity:9.8f,  velocity:20f,\
+        c_drag:0.4f,    c_ldrag:1.6f,       c_reflect:0.8f, c_friction:0.7f,\
         max_time:200,   max_distance:150,   max_reflect:5,  min_velocity:0.001f,\
         kill:false,     rotate:true,        trail:"minecraft:dust{color:[1f,1f,1f],scale:0.2}",\
         additional:[],\
         events:{tick:"",hit_every:"",hit_entity:"",hit_block:"",hit_last:""},\
     }
+    execute unless data storage pm_motion:zz id run data modify storage pm_motion:zz id set value {used:[]}
     
 ## スコアのリセット
 
