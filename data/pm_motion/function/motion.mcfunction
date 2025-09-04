@@ -8,7 +8,8 @@
     data modify storage pm_motion:zz in merge from storage pm_motion: in
 
 ## idを設定
-    execute unless score @s pmmS.id matches 1.. run function zz.pm_motion:id
+    execute unless score @s pmmS.id matches -2147483648..2147483647 store result storage pm_motion:zz _.id int 1 store result score @s pmmS.id run scoreboard players add #core pmmS.id 1
+    execute as @e[tag=pmmT.through] run function zz.pm_motion:ray/macro/hitted_entity with storage pm_motion:zz _
 
 ## データを設定
     # パラメータの保存
@@ -16,9 +17,10 @@
     # 初速
     execute store result score #pmmH.1 pmmS.x.1 run data get storage pm_motion:zz in.velocity 100
     execute positioned 0. 0. 0. run tp 4fe002bb-0-0-0-1 ^ ^ ^1
-    execute store result score @s pmmS.x.1 run data get entity 4fe002bb-0-0-0-1 Pos[0] 1000
-    execute store result score @s pmmS.y.1 run data get entity 4fe002bb-0-0-0-1 Pos[1] 1000
-    execute store result score @s pmmS.z.1 run data get entity 4fe002bb-0-0-0-1 Pos[2] 1000
+    data modify storage pm_motion:zz _.pos set from entity 4fe002bb-0-0-0-1 Pos
+    execute store result score @s pmmS.x.1 run data get storage pm_motion:zz _.pos[0] 1000
+    execute store result score @s pmmS.y.1 run data get storage pm_motion:zz _.pos[1] 1000
+    execute store result score @s pmmS.z.1 run data get storage pm_motion:zz _.pos[2] 1000
     scoreboard players operation @s pmmS.x.1 *= #pmmH.1 pmmS.x.1
     scoreboard players operation @s pmmS.y.1 *= #pmmH.1 pmmS.x.1
     scoreboard players operation @s pmmS.z.1 *= #pmmH.1 pmmS.x.1

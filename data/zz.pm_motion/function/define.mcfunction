@@ -14,6 +14,7 @@
         scoreboard objectives add pmmS.time dummy "時間"
         scoreboard objectives add pmmS.distance dummy "距離"
         scoreboard objectives add pmmS.count dummy "カウント"
+        scoreboard objectives add pmmS.mode dummy "モード"
         # パラメータ
         scoreboard objectives add pmmS.1 dummy "parm1"
         scoreboard objectives add pmmS.2 dummy "parm2"

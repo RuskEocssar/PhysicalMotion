@@ -10,6 +10,7 @@
     execute store result score #pmmH.1 pmmS.1 run data get storage pm_motion:zz data.c_reflect 1000
     execute store result score #pmmH.1 pmmS.2 run data get storage pm_motion:zz data.c_friction 1000
     execute store result score #pmmH.1 pmmS.3 run data get storage pm_motion:zz data.min_velocity 100
+    execute if score #pmmH.1 pmmS.1 matches 1001.. run scoreboard players set #pmmH.1 pmmS.1 1000
 
 ## 加速度計算用
     # リセット (加速度)
@@ -30,8 +31,6 @@
     execute at @s run function zz.pm_motion:move/main
 
 ## 終了
-    # 時間
+    execute unless entity @s run return fail
     scoreboard players remove @s pmmS.time 1
-    execute if score @s pmmS.time matches ..0 run scoreboard players set #entity pmmS. 3
-    # 条件を満たした場合
-    execute if score #entity pmmS. matches 1.. run function zz.pm_motion:end
+    execute if score @s pmmS.time matches ..0 run function zz.pm_motion:move/end

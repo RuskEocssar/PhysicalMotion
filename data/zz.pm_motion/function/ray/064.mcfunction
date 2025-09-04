@@ -16,7 +16,7 @@
     
 ## ループ
     # パーティクル
-    execute unless data storage pm_motion:zz data{trail:""} run function zz.pm_motion:ray/macro/trail with storage pm_motion:zz data
+    execute unless data storage pm_motion:zz data.events{trail:""} run function zz.pm_motion:ray/macro/trail with storage pm_motion:zz data.events
     # 先に進む
     scoreboard players remove #pmmH.1 pmmS.distance 64
     execute if score #pmmH.1 pmmS.distance matches 1.. positioned ^ ^ ^0.64 run function zz.pm_motion:ray/064

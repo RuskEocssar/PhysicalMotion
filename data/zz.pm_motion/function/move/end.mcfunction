@@ -1,11 +1,11 @@
-#> zz.pm_motion:end
-# 終了 1->速度下限 2->最大距離 3->時間経過 4->衝突上限 5->ブロックに衝突 6->エンティティに衝突
+#> zz.pm_motion:move/end
+# 終了
 # @within
 #   function zz.pm_motion:**
 
-## ファンクションの実行
-
 ## データの処理
+    # イベント
+    execute unless data storage pm_motion:zz data.events{time_last:""} run function zz.pm_motion:move/macro/time_last with storage pm_motion:zz data.events
     # スコア
     scoreboard players reset @s pmmS.x.1
     scoreboard players reset @s pmmS.y.1
@@ -15,4 +15,3 @@
     scoreboard players reset @s pmmS.count
     # その他
     tag @s remove pmmT.motion
-    execute if data storage pm_motion:zz data{kill:true} run kill @s

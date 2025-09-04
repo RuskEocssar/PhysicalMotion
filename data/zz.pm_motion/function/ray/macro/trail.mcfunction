@@ -4,4 +4,4 @@
 #   function zz.pm_motion:**
 
 ## イベント実行
-    $particle $(trail) ~ ~ ~ 0 0 0 0.001 1
+    $$(trail)
