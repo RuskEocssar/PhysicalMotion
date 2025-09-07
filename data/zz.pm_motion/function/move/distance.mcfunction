@@ -22,6 +22,7 @@
     scoreboard players operation #pmmH.2 pmmS.z.1 *= #pmmH.2 pmmS.z.2
     scoreboard players operation #entity pmmS.distance += #pmmH.2 pmmS.y.1
     scoreboard players operation #entity pmmS.distance += #pmmH.2 pmmS.z.1
+    execute unless score #entity pmmS.distance matches 0..9999999 run scoreboard players set #entity pmmS.distance 10000000
     scoreboard players operation #entity pmmS.distance /= #c100 _
     scoreboard players operation #entity pmmS.distance *= #entity pmmS.time
     scoreboard players operation #entity pmmS.distance /= #c1000 _

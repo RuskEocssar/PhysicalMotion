@@ -5,9 +5,9 @@
 
 ## 速度の計算
     # 加速度を加算
-    scoreboard players operation #entity pmmS.x.2 *= #entity pmmS.time
-    scoreboard players operation #entity pmmS.y.2 *= #entity pmmS.time
-    scoreboard players operation #entity pmmS.z.2 *= #entity pmmS.time
+    scoreboard players operation #entity pmmS.x.2 *= #pmmH.1 pmmS.time
+    scoreboard players operation #entity pmmS.y.2 *= #pmmH.1 pmmS.time
+    scoreboard players operation #entity pmmS.z.2 *= #pmmH.1 pmmS.time
     scoreboard players operation #entity pmmS.x.2 /= #c1000 _
     scoreboard players operation #entity pmmS.y.2 /= #c1000 _
     scoreboard players operation #entity pmmS.z.2 /= #c1000 _

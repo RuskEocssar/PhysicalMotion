@@ -5,11 +5,12 @@
 
 ## 探査
     scoreboard players set #pmmH.ray002 pmmS. 1
-    # 角8方向に探査点を伸ばしてチェック (手前の1点はスキップ)
-    execute positioned ^ ^ ^0.01 if block ^ ^ ^0.01 #zz.pm_motion:through rotated ~180 ~ if block ^ ^ ^0.01 #zz.pm_motion:through if block ^ ^ ^-0.01 #zz.pm_motion:through rotated as 4fe002bb-0-0-0-1 if block ^ ^ ^0.01 #zz.pm_motion:through if block ^ ^ ^-0.01 #zz.pm_motion:through rotated ~180 ~ if block ^ ^ ^0.01 #zz.pm_motion:through if block ^ ^ ^-0.01 #zz.pm_motion:through run scoreboard players set #pmmH.ray002 pmmS. -1
-    execute if score #pmmH.ray002 pmmS. matches -1 positioned ^ ^ ^0.01 positioned ~-0.01 ~-0.01 ~-0.01 as @e[type=!#zz.pm_motion:through,tag=!pmmT.through,dx=0,dy=0,dz=0] positioned ~-0.98 ~-0.98 ~-0.98 if entity @s[dx=0,dy=0,dz=0] run scoreboard players set #pmmH.ray002 pmmS. 2
+    # 角8方向に探査点を伸ばしてチェック
+    execute positioned ^ ^ ^0.01 if block ~0.01 ~0.01 ~0.01 #zz.pm_motion:through if block ~0.01 ~0.01 ~-0.01 #zz.pm_motion:through if block ~0.01 ~-0.01 ~0.01 #zz.pm_motion:through if block ~0.01 ~-0.01 ~-0.01 #zz.pm_motion:through if block ~-0.01 ~0.01 ~0.01 #zz.pm_motion:through if block ~0.01 ~0.01 ~-0.01 #zz.pm_motion:through if block ~-0.01 ~-0.01 ~0.01 #zz.pm_motion:through if block ~-0.01 ~-0.01 ~-0.01 #zz.pm_motion:through run scoreboard players set #pmmH.ray002 pmmS. -1
+    execute if score #pmmH.ray002 pmmS. matches -1 positioned ^ ^ ^0.01 positioned ~-0.01 ~-0.01 ~-0.01 as @e[type=!#zz.pm_motion:through,tag=!pmmT.through,dx=0,dy=0,dz=0] positioned ~-0.98 ~-0.98 ~-0.98 if entity @s[dx=0,dy=0,dz=0] run function zz.pm_motion:ray/entity/002
+    execute if data storage pm_motion:zz data{size:1} if score #pmmH.ray002 pmmS. matches 1 run function zz.pm_motion:ray/ray_point
     # さらに細かくチェック
-    execute if score #pmmH.ray002 pmmS. matches 0.. run function zz.pm_motion:ray/001
+    execute if score #pmmH.ray002 pmmS. matches 1 run function zz.pm_motion:ray/001
     scoreboard players remove #pmmH.1 pmmS.distance 1
-    execute if score #pmmH.1 pmmS.distance matches 1.. if score #pmmH.ray002 pmmS. matches 0.. positioned ^ ^ ^0.01 run function zz.pm_motion:ray/001
+    execute if score #pmmH.1 pmmS.distance matches 1.. if score #pmmH.ray002 pmmS. matches 1 positioned ^ ^ ^0.01 run function zz.pm_motion:ray/001
     scoreboard players add #pmmH.1 pmmS.distance 1
