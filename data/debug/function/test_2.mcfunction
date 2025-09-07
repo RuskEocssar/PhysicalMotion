@@ -1,0 +1,1 @@
+execute at @s as @e[tag=ray] positioned as @s positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^1 facing entity @s feet facing ^ ^ ^-1 run function pm_motion:execute {func:"add",in:{velocity:0.5f}}

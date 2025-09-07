@@ -1,7 +1,11 @@
-#> pm_motion:motion
-# エンティティにモーションを付与する (プレイヤー以外)
+#> pm_motion:add
+# 速度を加算する
 # 実行時の向きが方向となる
 # @public
+
+## 入力の取得
+    data modify storage pm_motion:zz in set value {velocity:0.5f}
+    data modify storage pm_motion:zz in merge from storage pm_motion: in
 
 ## データを設定
     # 初速
