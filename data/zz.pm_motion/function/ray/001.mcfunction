@@ -7,6 +7,6 @@
     scoreboard players set #pmmH.ray001 pmmS. 1
     # 角8方向に探査点を伸ばしてチェック
     execute positioned ^ ^ ^0.005 if block ~0.005 ~0.005 ~0.005 #zz.pm_motion:through if block ~0.005 ~0.005 ~-0.005 #zz.pm_motion:through if block ~0.005 ~-0.005 ~0.005 #zz.pm_motion:through if block ~0.005 ~-0.005 ~-0.005 #zz.pm_motion:through if block ~-0.005 ~0.005 ~0.005 #zz.pm_motion:through if block ~0.005 ~0.005 ~-0.005 #zz.pm_motion:through if block ~-0.005 ~-0.005 ~0.005 #zz.pm_motion:through if block ~-0.005 ~-0.005 ~-0.005 #zz.pm_motion:through run scoreboard players set #pmmH.ray001 pmmS. -1
-    execute if score #pmmH.ray001 pmmS. matches -1 positioned ^ ^ ^0.005 positioned ~-0.005 ~-0.005 ~-0.005 as @e[type=!#zz.pm_motion:through,tag=!pmmT.through,dx=0,dy=0,dz=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0,dy=0,dz=0] run function zz.pm_motion:ray/entity/001
+    execute if score #pmmH.ray001 pmmS. matches -1 positioned ^ ^ ^0.005 positioned ~-0.005 ~-0.005 ~-0.005 as @e[type=!#zz.pm_motion:through,dx=0,dy=0,dz=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0,dy=0,dz=0] positioned ~0.495 ~0.495 ~0.495 positioned ^ ^ ^-0.505 unless entity @s[dx=0,dy=0,dz=0] run function zz.pm_motion:ray/entity/001
     # 判定
     execute if score #pmmH.ray001 pmmS. matches 1 run function zz.pm_motion:ray/ray_point

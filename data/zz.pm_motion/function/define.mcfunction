@@ -15,6 +15,7 @@
         scoreboard objectives add pmmS.distance dummy "距離"
         scoreboard objectives add pmmS.count dummy "カウント"
         scoreboard objectives add pmmS.mode dummy "モード"
+        scoreboard objectives add pmmS.through dummy "スルーされるエンティティ"
         # パラメータ
         scoreboard objectives add pmmS.1 dummy "parm1"
         scoreboard objectives add pmmS.2 dummy "parm2"

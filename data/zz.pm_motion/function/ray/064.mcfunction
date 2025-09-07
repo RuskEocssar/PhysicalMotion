@@ -7,7 +7,7 @@
     scoreboard players set #pmmH.ray064 pmmS. 1
     # 角8方向に探査点を伸ばしてチェック
     execute positioned ^ ^ ^0.32 if block ~0.32 ~0.32 ~0.32 #zz.pm_motion:through if block ~0.32 ~0.32 ~-0.32 #zz.pm_motion:through if block ~0.32 ~-0.32 ~0.32 #zz.pm_motion:through if block ~0.32 ~-0.32 ~-0.32 #zz.pm_motion:through if block ~-0.32 ~0.32 ~0.32 #zz.pm_motion:through if block ~0.32 ~0.32 ~-0.32 #zz.pm_motion:through if block ~-0.32 ~-0.32 ~0.32 #zz.pm_motion:through if block ~-0.32 ~-0.32 ~-0.32 #zz.pm_motion:through run scoreboard players set #pmmH.ray064 pmmS. -1
-    execute if score #pmmH.ray064 pmmS. matches -1 positioned ^ ^ ^0.32 positioned ~-0.32 ~-0.32 ~-0.32 as @e[type=!#zz.pm_motion:through,tag=!pmmT.through,dx=0,dy=0,dz=0] positioned ~-0.36 ~-0.36 ~-0.36 if entity @s[dx=0,dy=0,dz=0] run function zz.pm_motion:ray/entity/064
+    execute if score #pmmH.ray064 pmmS. matches -1 positioned ^ ^ ^0.32 positioned ~-0.32 ~-0.32 ~-0.32 as @e[type=!#zz.pm_motion:through,dx=0,dy=0,dz=0] positioned ~-0.36 ~-0.36 ~-0.36 if entity @s[dx=0,dy=0,dz=0] positioned ~0.18 ~0.18 ~0.18 positioned ^ ^ ^-0.82 unless entity @s[dx=0,dy=0,dz=0] run function zz.pm_motion:ray/entity/064
     execute if data storage pm_motion:zz data{size:6} if score #pmmH.ray064 pmmS. matches 1 run function zz.pm_motion:ray/ray_point
     # さらに細かくチェック
     execute if score #pmmH.ray064 pmmS. matches 1 run function zz.pm_motion:ray/032

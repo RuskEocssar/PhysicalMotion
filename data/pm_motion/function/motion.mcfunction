@@ -7,10 +7,6 @@
     data modify storage pm_motion:zz in set from storage pm_motion: in_default
     data modify storage pm_motion:zz in merge from storage pm_motion: in
 
-## idを設定
-    execute unless score @s pmmS.id matches -2147483648..2147483647 store result storage pm_motion:zz _.id int 1 store result score @s pmmS.id run scoreboard players add #core pmmS.id 1
-    execute as @e[tag=pmmT.through] run function zz.pm_motion:ray/macro/hitted_entity with storage pm_motion:zz _
-
 ## データを設定
     # パラメータの保存
     data modify entity @s data.pmm set from storage pm_motion:zz in
