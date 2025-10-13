@@ -4,4 +4,4 @@
 #   function zz.pm_motion:**
 
 ## イベント実行
-    $$(every_hit)
+    $$(hit_every)

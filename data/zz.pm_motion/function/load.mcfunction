@@ -12,7 +12,7 @@
         gravity:9.8f,  velocity:20f,\
         c_drag:0.4f,    c_ldrag:1.6f,       c_reflect:0.8f, c_friction:0.7f,\
         max_time:200,   max_distance:150,   max_reflect:5,  min_velocity:0.001f,\
-        rotate:true, size:0,\
+        rotate:true, size:0, kill:"none", entity:true, block:true,\
         additional:[],\
         events:{trail:"",hit_every:"",hit_entity:"",hit_block:"",hit_last:"",time_last:""},\
     }

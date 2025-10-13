@@ -9,7 +9,6 @@
     execute if data storage pm_motion:zz _.env{type:"acceleration"}
     execute if data storage pm_motion:zz _.env{type:"spring"}
     execute if data storage pm_motion:zz _.env{type:"string"}
-    execute if data storage pm_motion:zz _.env{type:"acceleration"}
 
 ## ループで実行
     execute if data storage pm_motion:zz _.additioanl[-1] run function zz.pm_motion:move/main
