@@ -4,7 +4,13 @@
 # @public
 
 ## 入力の取得
-    data modify storage pm_motion:zz in set from storage pm_motion: in_default
+    data modify storage pm_motion:zz in set value {\
+        gravity:9.8f,  velocity:20f,\
+        c_drag:0.4f,    c_ldrag:1.6f,       c_reflect:0.8f, c_friction:0.7f,\
+        max_time:200,   max_distance:150,   max_reflect:5,  min_velocity:0.001f,    time_scale:75,\
+        rotate:true, size:0, kill:"none", entity:true, block:true,\
+        events:{trail:"",hit_every:"",hit_entity:"",hit_block:"",hit_last:"",last:""},\
+    }
     data modify storage pm_motion:zz in merge from storage pm_motion: in
 
 ## データを設定

@@ -1,4 +1,4 @@
-#> zz.pm_motion:ray/macro/end
+#> zz.pm_motion:ray/macro/end_point
 # 探査の終点
 # @within
 #   function zz.pm_motion:**

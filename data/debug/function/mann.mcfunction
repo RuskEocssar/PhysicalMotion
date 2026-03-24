@@ -1,1 +1,0 @@
-data modify entity @s {} merge value {sleeping_pos:[0,1000,0],Pos:[27.5d, -62.0d, 17.5d]}

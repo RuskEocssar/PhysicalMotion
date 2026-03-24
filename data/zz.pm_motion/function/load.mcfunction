@@ -9,12 +9,11 @@
 ## 入力の初期設定
     execute unless data storage pm_motion: in run data modify storage pm_motion: in set value {}
     execute unless data storage pm_motion: in_default run data modify storage pm_motion: in_default set value {\
-        gravity:9.8f,  velocity:20f,\
+        gravity:15f,  velocity:20f,\
         c_drag:0.4f,    c_ldrag:1.6f,       c_reflect:0.8f, c_friction:0.7f,\
-        max_time:200,   max_distance:150,   max_reflect:5,  min_velocity:0.001f,\
+        max_time:200,   max_distance:150,   max_reflect:5,  min_velocity:0.001f,    time_scale:50,\
         rotate:true, size:0, kill:"none", entity:true, block:true,\
-        additional:[],\
-        events:{trail:"",hit_every:"",hit_entity:"",hit_block:"",hit_last:"",time_last:""},\
+        events:{trail:"",hit_every:"",hit_entity:"",hit_block:"",hit_last:"",last:""},\
     }
     execute unless data storage pm_motion:zz id run data modify storage pm_motion:zz id set value {used:[]}
     

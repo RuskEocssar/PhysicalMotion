@@ -66,3 +66,4 @@
         #define entity 4fe002bb-0-0-0-1 Marker1
         #define entity 4fe002bb-0-0-0-2 Marker2
         #define entity 4fe002bb-0-0-0-3 Marker3
+        #define entity 4fe002bb-0-5-0-100000001 ItemDisplay1 (temp)

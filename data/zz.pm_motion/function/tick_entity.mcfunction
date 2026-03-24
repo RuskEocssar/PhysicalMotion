@@ -25,7 +25,7 @@
 ## 移動を実行
     # スコアリセット
     scoreboard players set #entity pmmS. 0
-    scoreboard players set #entity pmmS.time 50
+    execute store result score #entity pmmS.time run data get storage pm_motion:zz data.time_scale 1
     scoreboard players operation #pmmH.1 pmmS.time = #entity pmmS.time
     # 実行
     execute at @s run function zz.pm_motion:move/main
