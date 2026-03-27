@@ -139,4 +139,4 @@ function pm_motion:kill_all
 
 | タグ | 名前 | 説明 |
 | --- | --- | --- |
-| `entity.hitted` | 弾がヒットしたエンティティ | 弾がヒットしたエンティティに付与されるタグ。`hit_entity``hit_block``hit_every`に設定したコマンドからのみ参照できる。
+| `entity.hitted` | 弾がヒットしたエンティティ | 弾がヒットしたエンティティに付与されるタグ。`hit_entity` `hit_block` `hit_every` に設定したコマンドからのみ参照できる。
