@@ -53,6 +53,7 @@
 
 ## Tags
     #> Public
+        #define tag entity.hitted
     # @public
  
 ## Team

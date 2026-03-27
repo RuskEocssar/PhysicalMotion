@@ -6,5 +6,5 @@
 ## エンティティにヒット
     scoreboard players set #pmmH.ray001 pmmS. 1
     scoreboard players set #pmmH.root pmmS. 2
-    tag @s add pmmT.hitted
+    tag @s add entity.hitted
     data modify storage pm_motion:zz _.hit.entity set value 1b

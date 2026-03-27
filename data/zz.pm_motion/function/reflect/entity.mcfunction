@@ -5,7 +5,7 @@
 
 ## 反射
     # 反射方向を取得
-    execute facing entity @e[tag=pmmT.hitted,limit=1,sort=nearest] eyes facing ^ ^ ^-1 rotated ~ 0 positioned 0. 0. 0. run tp 4fe002bb-0-0-0-1 ^ ^ ^1
+    execute facing entity @e[tag=entity.hitted,limit=1,sort=nearest] eyes facing ^ ^ ^-1 rotated ~ 0 positioned 0. 0. 0. run tp 4fe002bb-0-0-0-1 ^ ^ ^1
     data modify storage pm_motion:zz _.pos set from entity 4fe002bb-0-0-0-1 Pos
     execute store result score #pmmH.2 pmmS.1 store result score #pmmH.2 pmmS.x.2 run data get storage pm_motion:zz _.pos[0] 100
     execute store result score #pmmH.2 pmmS.y.1 store result score #pmmH.2 pmmS.y.2 run data get storage pm_motion:zz _.pos[1] 100

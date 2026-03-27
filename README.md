@@ -48,8 +48,8 @@ pm_motion: in {
     events : {
         trail : <string>,       | ("") 0.64m毎に実行されるコマンド。パーティクルを設定して軌道を表示させることができる。 
         hit_every : <string>,   | ("") エンティティまたはブロックにヒットしたときに実行されるコマンド。
-        hit_entity : <string>,  | ("") エンティティにヒットしたときに実行されるコマンド。
-        hit_block : <string>,   | ("") ブロックにヒットしたときに実行されるコマンド。
+        hit_entity : <string>,  | ("") エンティティにヒットしたときに実行されるコマンド。ヒットしたエンティティにはentity.hittedタグが付与される。
+        hit_block : <string>,   | ("") ブロックにヒットしたときに実行されるコマンド。実行座標はヒットしたブロックの中心となる。
         hit_last : <string>,    | ("") 最後の衝突時に実行されるコマンド。
         last : <string>,        | ("") モーション終了時に実行されるコマンド。
     }
@@ -133,3 +133,10 @@ function pm_motion:execute {func:"motion",in:{velocity:0.3f,add:false,inertia:tr
 # 実行
 function pm_motion:kill_all
 ```
+
+# エンティティタグ
+このデータパックで使用されるエンティティタグのうち、ユーザー向けに用意しているものは次の通りです。
+
+| タグ | 名前 | 説明 |
+| --- | --- | --- |
+| 'entity.hitted' | 弾がヒットしたエンティティ | 弾がヒットしたエンティティに付与されるタグ。'hit_entity''hit_block''hit_every'に設定したコマンドからのみ参照できる。
