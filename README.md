@@ -107,6 +107,26 @@ execute rotated <x rotation> <y rotation> run function pm_motion:rotate
 execute rotated 0 -45 run function pm_motion:rotate
 ```
 
+### `pm_motion:cancel`
+　`pm_motion:cancel`ファンクションを弾を実行者として実行すると、データパックによる移動を中断します。  
+　中断のため、`last`に設定したイベントやキルは実行されません。
+
+▼基本的な使い方
+```mcfunction
+# 実行
+execute as @e[tag=pmmT.motion] run function pm_motion:cancel
+```
+
+### `pm_motion:end`
+　`pm_motion:end`ファンクションを弾を実行者として実行すると、データパックによる移動を終了します。  
+　終了のため、`last`に設定したイベントやキルが実行されます。
+
+▼基本的な使い方
+```mcfunction
+# 実行
+execute as @e[tag=pmmT.motion] run function pm_motion:end
+```
+
 ### `pm_motion:execute`
 　ファンクションの入力設定と実行を、マクロによって1行で行うためのファンクションです。マクロを使う分負荷がやや高くなりますが、簡易的に実行することができます。
 
@@ -140,3 +160,4 @@ function pm_motion:kill_all
 | タグ | 名前 | 説明 |
 | --- | --- | --- |
 | `entity.hitted` | 弾がヒットしたエンティティ | 弾がヒットしたエンティティに付与されるタグ。`hit_entity` `hit_block` `hit_every` に設定したコマンドからのみ参照できる。
+| `pmmT.motion` | 弾に設定されたエンティティ | motionファンクションを実行したエンティティに付与されるタグ。タグが付いている間はコマンドが実行される。
