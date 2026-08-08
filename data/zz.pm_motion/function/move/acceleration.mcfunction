@@ -6,7 +6,7 @@
 ## 加速度
     # 粘性抵抗 (速度に比例した抵抗)
     execute store result score #pmmH.1 pmmS.4 run data get storage pm_motion:zz data.c_drag 1000
-    execute at @s if block ~ ~ ~ #zz.pm_motion:liquid store result score #pmmH.1 pmmS.4 run data get storage pm_motion:zz data.c_ldrag 1000
+    execute at @s if block ~ ~ ~ #pm_motion:liquid store result score #pmmH.1 pmmS.4 run data get storage pm_motion:zz data.c_ldrag 1000
     execute unless score #pmmH.1 pmmS.4 matches 0 run function zz.pm_motion:move/drag
     # # そのほかの入力条件(未実装)
     # data modify storage pm_motion:zz _.additional set from storage pm_motion:zz data.additional

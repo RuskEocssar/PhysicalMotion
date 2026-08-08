@@ -5,12 +5,12 @@
 
 ## 探査
     # ヒットの方向を取得する
-    execute if score @s pmmS.x.1 matches 1.. if block ~ ~ ~ #zz.pm_motion:through unless block ~0.5 ~ ~ #zz.pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.x+ set value 1b
-    execute if score @s pmmS.x.1 matches ..-1 if block ~ ~ ~ #zz.pm_motion:through unless block ~-0.5 ~ ~ #zz.pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.x- set value 1b
-    execute if score @s pmmS.y.1 matches 1.. if block ~ ~ ~ #zz.pm_motion:through unless block ~ ~0.5 ~ #zz.pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.y+ set value 1b
-    execute if score @s pmmS.y.1 matches ..-1 if block ~ ~ ~ #zz.pm_motion:through unless block ~ ~-0.5 ~ #zz.pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.y- set value 1b
-    execute if score @s pmmS.z.1 matches 1.. if block ~ ~ ~ #zz.pm_motion:through unless block ~ ~ ~0.5 #zz.pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.z+ set value 1b
-    execute if score @s pmmS.z.1 matches ..-1 if block ~ ~ ~ #zz.pm_motion:through unless block ~ ~ ~-0.5 #zz.pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.z- set value 1b
+    execute if score @s pmmS.x.1 matches 1.. if block ~ ~ ~ #pm_motion:through unless block ~0.5 ~ ~ #pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.x+ set value 1b
+    execute if score @s pmmS.x.1 matches ..-1 if block ~ ~ ~ #pm_motion:through unless block ~-0.5 ~ ~ #pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.x- set value 1b
+    execute if score @s pmmS.y.1 matches 1.. if block ~ ~ ~ #pm_motion:through unless block ~ ~0.5 ~ #pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.y+ set value 1b
+    execute if score @s pmmS.y.1 matches ..-1 if block ~ ~ ~ #pm_motion:through unless block ~ ~-0.5 ~ #pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.y- set value 1b
+    execute if score @s pmmS.z.1 matches 1.. if block ~ ~ ~ #pm_motion:through unless block ~ ~ ~0.5 #pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.z+ set value 1b
+    execute if score @s pmmS.z.1 matches ..-1 if block ~ ~ ~ #pm_motion:through unless block ~ ~ ~-0.5 #pm_motion:through store success score #pmmH.root pmmS. run data modify storage pm_motion:zz _.hit.z- set value 1b
     # 探査を終了しない
     execute if score #pmmH.root pmmS. matches 0 run return fail
     # 移動
